@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    
+    <head>
+        <meta charset="utf-8" />
+        <meta name="renderer" content="webkit" />
+        <meta http-equiv="X-UA-Compatible" content="IE=8,9,10" />
+        <title>
+            ShearPhoto官方主页_支持HTML5头像裁剪_JS裁剪截图_数码照片压缩裁剪_商品图片编辑_在线拍照裁剪插件
+        </title>
+        <meta content="ShearPhoto官方主页,HTML5裁剪截图,图像_头像裁剪,JS裁剪截图,商城商品图片编辑,最强的裁剪插件"
+        name="Keywords" />
+        <meta name="description" content="ShearPhoto,完美支持HTML5截图裁剪,支持Linux Windows 服务器,国外空间等完美通过,ShearPhoto兼容IE6 7 8 及所有浏览器，ShearPhoto拖动拉伸超准，超流畅，在互联网同类型插件绝对排行第一，除了shearphoto，你别无选择！ "
+        />
+        <link href="css/shearPhoto.css" rel="stylesheet"
+        type="text/css" media="all" />
+        <script type="text/javascript" src="./js/shearPhoto.js">
+        </script>
+        <script type="text/javascript" src="js/webcam_shearPhoto.js">
+        </script>
+        <script type="text/javascript" src="js/alloyimage.js">
+        </script>
+        <script type="text/javascript" src="js/handle.js">
+        </script>
+        <style type="text/css">
+            .header A{ margin-left: 20px; } .introduce { float: left; position:absolute;
+            width: 150px; background-color: #CCC; border: 1px solid #666; left: 0px;
+            top: 77px; padding: 5px; } .introduce strong { font-size: 14px; color:
+            #F30; } .bottom { padding-top: 80px; }
+        </style>
+    </head>
+    
+    <body>
+        <!--<div class="introduce">
+            <p>
+                <strong>
+                    1:ShearPhoto_完美支持HTML5本地截图裁剪 完美支持Linux Windows 服务器，国外空间等完美通过。
+                </strong>
+                <br />
+                <br />
+                <strong>
+                    2:ShearPhoto支持图片特效，含14种图片特效，绝对能PK美图秀秀！
+                </strong>
+                <br />
+                <br />
+                3:ShearPhoto兼容IE6及所有浏览器,兼容PHP5.2X至PHP7.0！
+                <br />
+                <br />
+                <strong>
+                    4:ShearPhoto能直接数码相机几十M的图片，快速压缩，截图，可用于商城商品图片编辑
+                </strong>
+                <br />
+                <br />
+                5:ShearPhoto支持translate3d 硬件加速移动
+                <br />
+                <br />
+                6:ShearPhoto拖动拉伸超准，超流畅，在互联网同类型插件绝对排行第一，除了shearphoto，你别无选择！
+                <br />
+                <br />
+                <strong>
+                    7:ShearPhoto支持java了，基于JFinal，在ShearPhoto1.3基础下进行开发！
+                </strong>
+                <br />
+                <br />
+                8:ShearPhoto接口多多，请自己下载体验，很多骂ShearPhoto不能设置比例，麻烦你看清楚设置方法，ShearPhoto绝对可以设置比例，绝不会犯低级错误
+            </p>
+        </div>-->
+        
+        <!--<div class="header">
+            <img src="images/logo.png" alt="ShearPhoto官方网站：www.shearphoto.com"
+            title="ShearPhoto官方网站：www.shearphoto.com" />
+            <a href="http://www.shearphoto.com/bbs" title="shearphoto官方论坛">
+                进入官方论坛
+            </a>
+            <a href="http://www.shearphoto.com/bbs/forum.php?mod=viewthread&amp;tid=3"
+            title="立即下载" style="width:230px">
+                立即下载shearphoto 2.3 正式版
+            </a>
+            <strong>
+                ShearPhoto 作者：明哥先生 QQ399195513-兼容所有浏览器，乞今最好的JS裁剪，HTML5裁剪插件！
+            </strong>
+        </div>-->
+        
+        <div id="shearphoto_loading">
+            程序加载中......
+        </div>
+        <div id="shearphoto_main">
+            <div class="Effects" id="shearphoto_Effects" autocomplete="off">
+                <strong class="EffectsStrong">
+                    截图效果
+                </strong>
+                <a href="javascript:;" strevent="原图" class="Aclick">
+                    <img src="images/Effects/e0.jpg" />
+                    原图
+                </a>
+                <a href="javascript:;" strevent="美肤">
+                    <img src="images/Effects/e1.jpg" />
+                    美肤效果
+                </a>
+                <a href="javascript:;" strevent="素描">
+                    <img src="images/Effects/e2.jpg" />
+                    素描效果
+                </a>
+                <a href="javascript:;" strevent="自然增强">
+                    <img src="images/Effects/e3.jpg" />
+                    自然增强
+                </a>
+                <a href="javascript:;" strevent="紫调">
+                    <img src="images/Effects/e4.jpg" />
+                    紫调效果
+                </a>
+                <a href="javascript:;" strevent="柔焦">
+                    <img src="images/Effects/e5.jpg" />
+                    柔焦效果
+                </a>
+                <a href="javascript:;" strevent="复古">
+                    <img src="images/Effects/e6.jpg" />
+                    复古效果
+                </a>
+                <a href="javascript:;" strevent="黑白">
+                    <img src="images/Effects/e7.jpg" />
+                    黑白效果
+                </a>
+                <a href="javascript:;" strevent="仿lomo">
+                    <img src="images/Effects/e8.jpg" />
+                    仿lomo
+                </a>
+                <a href="javascript:;" strevent="亮白增强">
+                    <img src="images/Effects/e9.jpg" />
+                    亮白增强
+                </a>
+                <a href="javascript:;" strevent="灰白">
+                    <img src="images/Effects/e10.jpg" />
+                    灰白效果
+                </a>
+                <a href="javascript:;" strevent="灰色">
+                    <img src="images/Effects/e11.jpg" />
+                    灰色效果
+                </a>
+                <a href="javascript:;" strevent="暖秋">
+                    <img src="images/Effects/e12.jpg" />
+                    暖秋效果
+                </a>
+                <a href="javascript:;" strevent="木雕">
+                    <img src="images/Effects/e13.jpg" />
+                    木雕效果
+                </a>
+                <a href="javascript:;" strevent="粗糙">
+                    <img src="images/Effects/e14.jpg" />
+                    粗糙效果
+                </a>
+            </div>
+            <div class="primary">
+                <div id="main">
+                    <div class="point">
+                    </div>
+                    <div id="SelectBox">
+                        <form id="ShearPhotoForm" enctype="multipart/form-data" method="post" target="POSTiframe">
+                            <input name="shearphoto" type="hidden" value="我要在这里传参数" autocomplete="off"/>
+                            <a href="javascript:;" id="selectImage">
+                                <input type="file" name="UpFile" autocomplete="off" />
+                            </a>
+                        </form>
+                        <a href="javascript:;" id="PhotoLoading">
+                        </a>
+                        <a href="javascript:;" id="camerasImage">
+                        </a>
+                    </div>
+                    <div id="relat">
+                        <div id="black">
+                        </div>
+                        <div id="movebox">
+                            <div id="smallbox">
+                                <img src="images/default.gif" class="MoveImg" />
+                            </div>
+                            <i id="borderTop">
+                            </i>
+                            <i id="borderLeft">
+                            </i>
+                            <i id="borderRight">
+                            </i>
+                            <i id="borderBottom">
+                            </i>
+                            <i id="BottomRight">
+                            </i>
+                            <i id="TopRight">
+                            </i>
+                            <i id="Bottomleft">
+                            </i>
+                            <i id="Topleft">
+                            </i>
+                            <i id="Topmiddle">
+                            </i>
+                            <i id="leftmiddle">
+                            </i>
+                            <i id="Rightmiddle">
+                            </i>
+                            <i id="Bottommiddle">
+                            </i>
+                        </div>
+                        <img src="images/default.gif" class="BigImg" />
+                    </div>
+                </div>
+                <div style="clear: both">
+                </div>
+                <div id="Shearbar">
+                    <a id="LeftRotate" href="javascript:;">
+                        <em>
+                        </em>
+                        向左旋转
+                    </a>
+                    <em class="hint L">
+                    </em>
+                    <div class="ZoomDist" id="ZoomDist">
+                        <div id="Zoomcentre">
+                        </div>
+                        <div id="ZoomBar">
+                        </div>
+                        <span class="progress">
+                        </span>
+                    </div>
+                    <em class="hint R">
+                    </em>
+                    <a id="RightRotate" href="javascript:;">
+                        向右旋转
+                        <em>
+                        </em>
+                    </a>
+                    <p class="Psava">
+                        <a id="againIMG" href="javascript:;">
+                            重新选择
+                        </a>
+                        <a id="saveShear" href="javascript:;">
+                            保存截图
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div style="clear: both">
+            </div>
+        </div>
+        <div id="photoalbum">
+            <h1>
+                假如：这是一个相册--------试试点击图片
+            </h1>
+            <i id="close">
+            </i>
+            <ul>
+                <li>
+                    <img src="file/photo/1.jpg" serveurl="file/photo/1.jpg"/>
+                </li>
+                <li>
+                    <img src="file/photo/2.jpg" serveurl="file/photo/2.jpg"/>
+                </li>
+                <li>
+                    <img src="file/photo/3.jpg" serveurl="file/photo/3.jpg"/>
+                </li>
+                <li>
+                    <img src="file/photo/4.jpg" serveurl="file/photo/4.jpg"/>
+                </li>
+                <li>
+                    <img src="file/photo/5.jpg" serveurl="file/photo/5.jpg"/>
+                </li>
+                <li>
+                    <img src="file/photo/6.jpg" serveurl="file/photo/6.jpg"/>
+                </li>
+                <li>
+                    <img src="file/photo/7.jpg" serveurl="file/photo/7.jpg"/>
+                </li>
+                <li>
+                    <img src="file/photo/8.jpg" serveurl="file/photo/8.jpg"/>
+                </li>
+            </ul>
+        </div>
+        <div id="CamBox">
+            <p class="lens">
+            </p>
+            <div id="CamFlash">
+            </div>
+            <p class="cambar">
+                <a href="javascript:;" id="CamOk">
+                    拍照
+                </a>
+                <a href="javascript:;" id="setCam">
+                    设置
+                </a>
+                <a href="javascript:;" id="camClose">
+                    关闭
+                </a>
+                <span style="clear:both;">
+                </span>
+            </p>
+            <div id="timing">
+            </div>
+        </div>
+        
+        <!--<div class="bottom">
+            ShearPhoto作者：
+            <span>
+                <img src="images/Author.png" title="这是shearphoto作者肖像，请你保留，不要删除"
+                />
+            </span>
+            明哥先生 QQ399195513&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;ShearPhoto兼容目前所有浏览器&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;ShearPhoto裁剪图像官方网站：
+            <a href="http://www.shearphoto.com">
+                www.shearphoto.com
+            </a>
+            &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;官方QQ群：461550716
+            <br />
+            Copyright &copy; 2015 明哥先生. All Rights Reserved
+            <script language="javascript" type="text/javascript" src="http://js.users.51.la/18250727.js">
+            </script>
+            <noscript>
+                <a href="http://www.51.la/?18250727" target="_blank">
+                    <img alt="我要啦免费统计" src="http://img.users.51.la/18250727.asp" style="border:none"
+                    />
+                </a>
+            </noscript>
+            <script type="text/javascript">
+                var cnzz_protocol = (("https:" == document.location.protocol) ? " https://": " http://");
+                document.write(unescape("%3Cspan id='cnzz_stat_icon_1256002952'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/stat.php%3Fid%3D1256002952%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+            </script>
+        </div>-->
+    </body>
+
+</html>

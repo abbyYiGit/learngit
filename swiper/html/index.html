@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">		
+		<title>移动端</title>
+		<link rel="stylesheet" type="text/css" href="../css/swiper.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/index.css"/>
+		<script src="../js/rem.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="swiper-container">
+			<!--页面主体-->
+		    <div class="swiper-wrapper">
+		        <div class="swiper-slide">Slide 1</div>
+		        <div class="swiper-slide">Slide 2</div>
+		        <div class="swiper-slide">Slide 3</div>
+		    </div>
+		    <!-- 如果需要分页器 -->
+		    <div class="swiper-pagination"></div>
+		    
+		    <!-- 如果需要导航按钮 -->
+		    <!--<div class="swiper-button-prev"></div>
+		    <div class="swiper-button-next"></div>-->
+		    
+		    <!-- 如果需要滚动条 -->
+		    <div class="swiper-scrollbar"></div>
+		</div>
+	</body>
+	<script src="../js/swiper.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var mySwiper = new Swiper ('.swiper-container', {
+		   	//初始化时slide索引
+		   	initialSlide: 0,		   	
+		   	//滑动方向
+		   	//horizontal 水平
+		   	//vertical 垂直
+		   	direction: 'vertical',
+		   	//effect: 'cube',
+		   	effect: 'coverflow',
+		   	//手指松开至slide贴合的时间
+		   	speed:1000,
+		   	//设置自动播放的事件间隔
+		   	//autoplay:1000,
+		   	//设置为true 则开启loop模式,让Swiper看起来是循环的
+		   	//loop: true, 
+		    // 如果需要分页器		    
+		    pagination: '.swiper-pagination',
+		    //paginationType:"progress",
+		    paginationClickable:true,
+		    //paginationHide:true,
+//		    paginationBulletRender:function(swiper,index,classname){
+//		    	return '<i class="'+classname+'">'+(index+1)+'</i>'
+//		    },
+		    //触摸距离与slide滑动距离的比率
+		    touchRatio:0.2,
+		    //无法滑动
+		    //onlyExternal:true,
+		    //滑块跟随手指进行移动
+		    //followFinger:false,
+		    //定义longSwipesMs
+		    longSwipesMs: 1000,
+		    longSwipes: false,
+		    // 如果需要前进后退按钮
+		    nextButton: '.swiper-button-next',
+		    prevButton: '.swiper-button-prev',
+		    //设置可显示模块数量
+//		    slidesPerView: 1,
+//		 	centeredSlides: true
+		    onSlideChangeStart:function(){
+		    	console.log("开始滑动")
+		    },
+		    onSlideChangeEnd:function(){
+		    	console.log("滑动结束")
+		    },
+		    // 如果需要滚动条
+		    //scrollbar: '.swiper-scrollbar',
+		}) 
+	</script>
+</html>
